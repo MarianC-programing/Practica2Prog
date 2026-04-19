@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body style="background-color: rgb(203, 240, 253); font-family: Arial, sans-serif;">
+    <header>
+        <p style="text-align: center; font-weight: bold;">PAGINA 5</p>
+        <br>
+        <h1 style="text-align: center;">FORMULARIO DE REGISTRO </h1>
+    </header>
+
+    <section>
+        <p>Bienvenido al formulario de registro para nuestro restaurante.</p>
+        <form>
+
+            <! -Informacion personal->
+            <legend><h2>Información Personal</h2></legend>
+
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required>
+            </p>
+
+            <p>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" required>
+            </p>
+
+            <p>
+                <label for="cedula">Cédula:</label>
+                <input type="text" name="cedula" required>
+            </p>
+
+            <p>
+                <label for="fecha_nac">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha_nac" required>
+            </p>
+
+            <p>
+                <label for="provincia">Lugar de Nacimiento (Provincia):</label><br>
+                <select name="provincia" required>
+                    <option value="">Seleccione una provincia</option>
+                    <option value="panama">Panamá</option>
+                    <option value="colon">Colón</option>
+                    <option value="veraguas">Veraguas</option>
+                    <option value="chiriqui">Chiriquí</option>
+                    <option value="cocle">Coclé</option>
+                    <option value="herrera">Herrera</option>
+                    <option value="los_santos">Los Santos</option>
+                    <option value="darien">Darién</option>
+                    <option value="guna_yala">Guna Yala</option>
+                    <option value="embera_wounaan">Emberá-Wounaan</option>
+                </select>
+            </p>
+
+        <!-Informacion del curso->
+        <legend><h2><b>Información del Curso</b></h2></legend>
+
+        <p><b>Facultad a la que pertenece (Seleccione una):</b></p>
+        <p>
+            <input type="radio" name="facultad" value="ingenieria"> Ingeniería<br>
+            <input type="radio" name="facultad" value="ciencias"> Ciencias<br>
+            <input type="radio" name="facultad" value="medicina"> Medicina<br>
+            <input type="radio" name="facultad" value="arquitectura"> Arquitectura<br>
+            <input type="radio" name="facultad" value="derecho"> Derecho<br>
+            <input type="radio" name="facultad" value="informatica"> Informática<br>
+        </p>
+
+        <p><b><h2>Temas de interés (seleccione uno o más):</h2></b></p>
+        <p>
+            <input type="checkbox" name="interes" value="programacion"> Programación<br>
+            <input type="checkbox" name="interes" value="disenio"> Diseño y Arte<br>
+            <input type="checkbox" name="interes" value="redes"> Tecnologías para conectividad en la Red<br>
+            <input type="checkbox" name="interes" value="investigacion"> Investigación e Innovación
+        </p>
+ 
+        <p>
+          <label for="experiencia"><b>Experiencia en Programación:</b></label><br>
+          <textarea name="experiencia" rows="4" cols="50"></textarea>
+        </p>
+
+        <!-Informacion de salud->
+        <legend><h2><b>Información de Salud</b></h2></legend>
+        <p>
+            <label for="peso"><b>Peso (kg):</b></label>
+        </p>
+
+
+
+        </form>
+    </section>
+    
+</html>
