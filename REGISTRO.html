@@ -85,7 +85,37 @@
         <!-Informacion de salud->
         <legend><h2><b>Información de Salud</b></h2></legend>
         <p>
-            <label for="peso"><b>Peso (kg):</b></label>
+            <label for="peso"><b>Peso (kg):</b><span id="peso_val">70</span> kg</label><br>
+          <input type="range" id="peso" name="peso" min="30" max="200" value="70"
+            oninput="document.getElementById('peso_val').innerText = this.value">
+        </p>
+ 
+        <p>
+          <label for="altura"><b>Altura (cm): </b><span id="altura_val">170</span> cm</label>
+        <br>
+          <input type="range" id="altura" name="altura" min="100" max="220" value="170"
+            oninput="document.getElementById('altura_val').innerText = this.value">
+        </p>
+ 
+        <p><b>Alergias (seleccione todas las que apliquen):</b></p>
+        <p>
+            <input type="checkbox" name="alergia" value="rinitis"> Rinitis<br>
+            <input type="checkbox" name="alergia" value="asma"> Asma<br>
+            <input type="checkbox" name="alergia" value="lactosa"> Lactosa<br>
+            <input type="checkbox" name="alergia" value="medicamentos"> Medicamentos, especificar:
+            <input type="text" name="medicamentos_detalle" size="30"><br>
+            <input type="checkbox" name="alergia" value="otro"> Otro, especificar:
+            <input type="text" name="otro_detalle" size="30">
+        </p>
+ 
+      <p>
+        <input type="submit" value="Enviar">
+      </p>
+ 
+    </form>
+ 
+    <br>
+    <p style="text-align:center;"><a href="HOME.html"><u><b>REGRESAR</b></u></a></p></label>
         </p>
 
 
