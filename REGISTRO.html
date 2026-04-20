@@ -5,122 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
+
 <body style="background-color: rgb(203, 240, 253); font-family: Arial, sans-serif;">
+
     <header>
         <p style="text-align: center; font-weight: bold;">PAGINA 5</p>
-        <br>
-        <h1 style="text-align: center;">FORMULARIO DE REGISTRO </h1>
+        <h1 style="text-align: center;">FORMULARIO DE REGISTRO</h1>
     </header>
 
     <section>
         <p>Bienvenido al formulario de registro para nuestro restaurante.</p>
+
         <form>
 
-            <! -Informacion personal->
-            <legend><h2>Información Personal</h2></legend>
+            <!-- Información Personal -->
+            <fieldset>
+                <legend><h2>Información Personal</h2></legend>
+
+                <p>
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required>
+                </p>
+                <p>
+                    <label>Apellido:</label>
+                    <input type="text" name="apellido" required>
+                </p>
+                <p>
+                    <label>Cédula:</label>
+                    <input type="text" name="cedula" required>
+                </p>
+                <p>
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha_nac" required>
+                </p>
+                <p>
+                    <label>Lugar de Nacimiento (Provincia):</label><br>
+                    <select name="provincia" required>
+                        <option value="">Seleccione una provincia</option>
+                        <option value="panama" selected>Panamá</option>
+                        <option value="colon">Colón</option>
+                        <option value="veraguas">Veraguas</option>
+                        <option value="chiriqui">Chiriquí</option>
+                        <option value="cocle">Coclé</option>
+                        <option value="herrera">Herrera</option>
+                        <option value="los_santos">Los Santos</option>
+                        <option value="darien">Darién</option>
+                        <option value="guna_yala">Guna Yala</option>
+                        <option value="embera_wounaan">Emberá-Wounaan</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <!-- Información del Curso -->
+            <fieldset>
+                <legend><h2>Información del Curso</h2></legend>
+
+                <p><b>Facultad a la que pertenece (Seleccione una):</b></p>
+                <p>
+                    <input type="radio" name="facultad" value="ingenieria"> Ingeniería<br>
+                    <input type="radio" name="facultad" value="ciencias"> Ciencias<br>
+                    <input type="radio" name="facultad" value="medicina"> Medicina<br>
+                    <input type="radio" name="facultad" value="arquitectura"> Arquitectura<br>
+                    <input type="radio" name="facultad" value="derecho"> Derecho<br>
+                    <input type="radio" name="facultad" value="informatica"> Informática<br>
+                </p>
+
+                <p><b>Temas de interés (seleccione uno o más):</b></p>
+                <p>
+                    <input type="checkbox" name="interes" value="programacion"> Programación<br>
+                    <input type="checkbox" name="interes" value="disenio"> Diseño y Arte<br>
+                    <input type="checkbox" name="interes" value="redes"> Tecnologías para conectividad en la Red<br>
+                    <input type="checkbox" name="interes" value="investigacion"> Investigación e Innovación
+                </p>
+
+                <p>
+                    <label><b>Experiencia en Programación:</b></label><br>
+                    <textarea name="experiencia" rows="4" cols="50"></textarea>
+                </p>
+            </fieldset>
+
+            <!-- Información de Salud -->
+            <fieldset>
+                <legend><h2>Información de Salud</h2></legend>
+
+                <p>
+                    <label><b>Peso (kg):</b></label><br>
+                    <input type="range" name="peso" min="30" max="200" value="70">
+                </p>
+                <p>
+                    <label><b>Altura (cm):</b></label><br>
+                    <input type="range" name="altura" min="100" max="220" value="170">
+                </p>
+
+                <p><b>Alergias (seleccione todas las que apliquen):</b></p>
+                <p>
+                    <input type="checkbox" name="alergia" value="rinitis"> Rinitis<br>
+                    <input type="checkbox" name="alergia" value="asma"> Asma<br>
+                    <input type="checkbox" name="alergia" value="lactosa"> Lactosa<br>
+                    <input type="checkbox" name="alergia" value="medicamentos"> Medicamentos, especificar:
+                    <input type="text" name="medicamentos_detalle" size="30"><br>
+                    <input type="checkbox" name="alergia" value="otro"> Otro, especificar:
+                    <input type="text" name="otro_detalle" size="30">
+                </p>
+            </fieldset>
 
             <p>
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" required>
+                <input type="submit" value="Enviar">
             </p>
-
-            <p>
-                <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" required>
-            </p>
-
-            <p>
-                <label for="cedula">Cédula:</label>
-                <input type="text" name="cedula" required>
-            </p>
-
-            <p>
-                <label for="fecha_nac">Fecha de Nacimiento:</label>
-                <input type="date" name="fecha_nac" required>
-            </p>
-
-            <p>
-                <label for="provincia">Lugar de Nacimiento (Provincia):</label><br>
-                <select name="provincia" required>
-                    <option value="">Seleccione una provincia</option>
-                    <option value="panama">Panamá</option>
-                    <option value="colon">Colón</option>
-                    <option value="veraguas">Veraguas</option>
-                    <option value="chiriqui">Chiriquí</option>
-                    <option value="cocle">Coclé</option>
-                    <option value="herrera">Herrera</option>
-                    <option value="los_santos">Los Santos</option>
-                    <option value="darien">Darién</option>
-                    <option value="guna_yala">Guna Yala</option>
-                    <option value="embera_wounaan">Emberá-Wounaan</option>
-                </select>
-            </p>
-
-        <!-Informacion del curso->
-        <legend><h2><b>Información del Curso</b></h2></legend>
-
-        <p><b>Facultad a la que pertenece (Seleccione una):</b></p>
-        <p>
-            <input type="radio" name="facultad" value="ingenieria"> Ingeniería<br>
-            <input type="radio" name="facultad" value="ciencias"> Ciencias<br>
-            <input type="radio" name="facultad" value="medicina"> Medicina<br>
-            <input type="radio" name="facultad" value="arquitectura"> Arquitectura<br>
-            <input type="radio" name="facultad" value="derecho"> Derecho<br>
-            <input type="radio" name="facultad" value="informatica"> Informática<br>
-        </p>
-
-        <p><b><h2>Temas de interés (seleccione uno o más):</h2></b></p>
-        <p>
-            <input type="checkbox" name="interes" value="programacion"> Programación<br>
-            <input type="checkbox" name="interes" value="disenio"> Diseño y Arte<br>
-            <input type="checkbox" name="interes" value="redes"> Tecnologías para conectividad en la Red<br>
-            <input type="checkbox" name="interes" value="investigacion"> Investigación e Innovación
-        </p>
- 
-        <p>
-          <label for="experiencia"><b>Experiencia en Programación:</b></label><br>
-          <textarea name="experiencia" rows="4" cols="50"></textarea>
-        </p>
-
-        <!-Informacion de salud->
-        <legend><h2><b>Información de Salud</b></h2></legend>
-        <p>
-            <label for="peso"><b>Peso (kg):</b><span id="peso_val">70</span> kg</label><br>
-          <input type="range" id="peso" name="peso" min="30" max="200" value="70"
-            oninput="document.getElementById('peso_val').innerText = this.value">
-        </p>
- 
-        <p>
-          <label for="altura"><b>Altura (cm): </b><span id="altura_val">170</span> cm</label>
-        <br>
-          <input type="range" id="altura" name="altura" min="100" max="220" value="170"
-            oninput="document.getElementById('altura_val').innerText = this.value">
-        </p>
- 
-        <p><b>Alergias (seleccione todas las que apliquen):</b></p>
-        <p>
-            <input type="checkbox" name="alergia" value="rinitis"> Rinitis<br>
-            <input type="checkbox" name="alergia" value="asma"> Asma<br>
-            <input type="checkbox" name="alergia" value="lactosa"> Lactosa<br>
-            <input type="checkbox" name="alergia" value="medicamentos"> Medicamentos, especificar:
-            <input type="text" name="medicamentos_detalle" size="30"><br>
-            <input type="checkbox" name="alergia" value="otro"> Otro, especificar:
-            <input type="text" name="otro_detalle" size="30">
-        </p>
- 
-      <p>
-        <input type="submit" value="Enviar">
-      </p>
- 
-    </form>
- 
-    <br>
-    <p style="text-align:center;"><a href="HOME.html"><u><b>REGRESAR</b></u></a></p></label>
-        </p>
-
-
 
         </form>
+
+        <br>
+        <p style="text-align:center;"><a href="HOME.html"><u><b>REGRESAR</b></u></a></p>
     </section>
-    
+
+</body>
 </html>
