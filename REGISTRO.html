@@ -88,13 +88,24 @@
             <fieldset>
                 <legend><h2>Información de Salud</h2></legend>
 
-                <p>
+                <!-- <p>  
                     <label><b>Peso (kg):</b></label><br>
                     <input type="range" name="peso" min="30" max="200" value="70">
                 </p>
                 <p>
                     <label><b>Altura (cm):</b></label><br>
                     <input type="range" name="altura" min="100" max="220" value="170">
+                </p> -->
+
+                 <p>
+                    <label for="peso"><b>Peso (kg): </b><span id="peso_val">70</span> kg</label><br>
+                    <input type="range" id="peso" name="peso" min="30" max="200" value="70"
+                        oninput="document.getElementById('peso_val').innerText = this.value">
+                </p>
+                <p>
+                    <label for="altura"><b>Altura (cm): </b><span id="altura_val">170</span> cm</label><br>
+                    <input type="range" id="altura" name="altura" min="100" max="220" value="170"
+                        oninput="document.getElementById('altura_val').innerText = this.value">
                 </p>
 
                 <p><b>Alergias (seleccione todas las que apliquen):</b></p>
